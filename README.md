@@ -1,3 +1,7 @@
+# Custom fork of ngx-intl-tel-input to support mat-autocomplete
+  - Uses Angular 14, not for public release!
+  - NPM Install: npm install "https://github.com/dickson-chan/angular-tel-input-autocomplete#mat-autocomplete" --save
+
 # International Telephone Input for Angular (NgxIntlTelInput)
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
@@ -102,25 +106,27 @@ Or this:
 
 ## Options
 
-| Options                  | Type                     | Default                           | Description                                                                                                   |
-| ------------------------ | ------------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| cssClass                 | `string`                 | `control-form`                    | Bootstrap input css class or your own custom one.                                                             |
-| preferredCountries       | `<CountryISO>[]`         | `[]`                              | List of countries, which will appear at the top.                                                              |
-| onlyCountries            | `<CountryISO>[]`         | `[]`                              | List of manually selected countries, which will appear in the dropdown.                                       |
-| enableAutoCountrySelect  | `boolean`                | `true`                            | Toggle automatic country (flag) selection based on user input.                                                |
-| enablePlaceholder        | `boolean`                | `true`                            | Input placeholder text, which adapts to the country selected.                                                 |
-| customPlaceholder        | `string`                 | `None`                            | Custom string to be inserted as a placeholder.                                                                |
-| numberFormat             | `<PhoneNumberFormat>`    | `PhoneNumberFormat.International` | Custom string to be inserted as a placeholder.                                                                |
-| searchCountryFlag        | `boolean`                | `false`                           | Enables input search box for countries in the flag dropdown.                                                  |
-| searchCountryField       | `<SearchCountryField>[]` | `[SearchCountryField.All]`        | Customize which fields to search in, if `searchCountryFlag` is enabled. Use `SearchCountryField` helper enum. |
-| searchCountryPlaceholder | `string`                 | `'Search Country'`                | Placeholder value for `searchCountryField`                                                                    |
-| maxLength                | `number`                 | `None`                            | Add character limit.                                                                                          |
-| selectFirstCountry       | `boolean`                | `true`                            | Selects first country from `preferredCountries` if is set. If not then uses main list.                        |
-| phoneValidation          | `boolean`                | `true`                            | Disable phone validation.                                                                                     |
-| inputId                  | `string`                 | `phone`                           | Unique ID for `<input>` element.                                                                              |
-| selectedCountryISO       | `<CountryISO>`           | `None`                            | Set specific country on load.                                                                                 |
-| separateDialCode         | `boolean`                | `false`                           | Visually separate dialcode into the drop down element.                                                        |
-| countryChange            | `<Country>`              | `None`                            | Emits country value when the user selects a country from the dropdown.                                        |
+| Options                    | Type                     | Default                           | Description                                                                                                   |
+| ------------------------   | ------------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| cssClass                   | `string`                 | `control-form`                    | Bootstrap input css class or your own custom one.                                                             |
+| preferredCountries         | `<CountryISO>[]`         | `[]`                              | List of countries, which will appear at the top.                                                              |
+| onlyCountries              | `<CountryISO>[]`         | `[]`                              | List of manually selected countries, which will appear in the dropdown.                                       |
+| enableAutoCountrySelect    | `boolean`                | `true`                            | Toggle automatic country (flag) selection based on user input.                                                |
+| enablePlaceholder          | `boolean`                | `true`                            | Input placeholder text, which adapts to the country selected.                                                 |
+| customPlaceholder          | `string`                 | `None`                            | Custom string to be inserted as a placeholder.                                                                |
+| numberFormat               | `<PhoneNumberFormat>`    | `PhoneNumberFormat.International` | Custom string to be inserted as a placeholder.                                                                |
+| searchCountryFlag          | `boolean`                | `false`                           | Enables input search box for countries in the flag dropdown.                                                  |
+| searchCountryField         | `<SearchCountryField>[]` | `[SearchCountryField.All]`        | Customize which fields to search in, if `searchCountryFlag` is enabled. Use `SearchCountryField` helper enum. |
+| searchCountryPlaceholder   | `string`                 | `'Search Country'`                | Placeholder value for `searchCountryField`                                                                    |
+| maxLength                  | `number`                 | `None`                            | Add character limit.                                                                                          |
+| selectFirstCountry         | `boolean`                | `true`                            | Selects first country from `preferredCountries` if is set. If not then uses main list.                        |
+| phoneValidation            | `boolean`                | `true`                            | Disable phone validation.                                                                                     |
+| inputId                    | `string`                 | `phone`                           | Unique ID for `<input>` element.                                                                              |
+| matAutocomplete            | `string`                 | `phone`                           | ID of the mat-autocomplete component the `<input>` element connects to.                                                                  |
+| matAutocompleteConnectedTo | `string`                 | `phone`                           | ID of the parent component housing this component.                                                                              |
+| selectedCountryISO         | `<CountryISO>`           | `None`                            | Set specific country on load.                                                                                 |
+| separateDialCode           | `boolean`                | `false`                           | Visually separate dialcode into the drop down element.                                                        |
+| countryChange              | `<Country>`              | `None`                            | Emits country value when the user selects a country from the dropdown.                                        |
 
 ## Supported Formats
 
