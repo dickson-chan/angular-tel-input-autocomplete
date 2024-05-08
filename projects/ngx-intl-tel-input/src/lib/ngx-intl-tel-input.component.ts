@@ -61,6 +61,8 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 	@Input() selectedCountryISO: CountryISO;
 	@Input() phoneValidation = true;
 	@Input() inputId = 'phone';
+	@Input() matAutocomplete = 'auto';
+	@Input() matAutocompleteConnectedTo = 'origin';
 	@Input() separateDialCode = false;
 	separateDialCodeClass: string;
 
